@@ -2,7 +2,6 @@ import java.text.DecimalFormat;
 import java.util.Scanner;
 import java.util.Arrays;
 
-
 public class Aplikasi {
         static String jumlah,hoetank,hariapa;
         static Scanner in = new Scanner(System.in);
@@ -18,13 +17,15 @@ public class Aplikasi {
 
 }
     static void menuutama (){
+        //menampilkan menu
         System.out.println("Silahkan pilih menu dibawah ini: ");
         System.out.println("- Ketik 1 Untuk Menghitung Angsuran Hoetank Anda");
         System.out.println("- Ketik 2 Jika anda lupa Hari Apa Kemarin");
-        System.out.print(">");
+        System.out.print(">");  
         
 }
    static void pilihan (int pil){
+        //pilihan menu
         switch(pil){
             case 1 : 
                 System.out.println("Anda memilih menu 1 ");
@@ -40,7 +41,8 @@ public class Aplikasi {
                 System.out.println("Invalid Input!");
         }
    }
-   static void hoetank(){
+     static void hoetank(){
+       //if User memilih menu 1
     int pinjaman, lamaAngsuran, bunga, angsuran, pembayaran;
     System.out.print("Masukkan besar pinjaman        : ");
     pinjaman = inp.nextInt();
@@ -61,6 +63,7 @@ public class Aplikasi {
     System.out.println("\n==============================\n");
    }
    static void hariapa(){
+     //if user memilih menu 2
     String hari;
     System.out.println("\n==============================\n");
     System.out.print("Masukkan hari : ");
@@ -82,6 +85,7 @@ public class Aplikasi {
     System.out.println("\n==============================\n");
     }
     static void decimal (double bil){
+      //decimal format
     DecimalFormat numberFormat = new DecimalFormat("###,###.00");
         System.out.println(numberFormat.format(bil));
         
