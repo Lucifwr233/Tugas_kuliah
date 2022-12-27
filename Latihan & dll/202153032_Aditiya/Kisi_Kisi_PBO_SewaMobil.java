@@ -328,7 +328,7 @@ public class Halaman_Utama extends javax.swing.JFrame {
         txno.setText("");
         txharga.setText("");
         txpnj.setText("");
-        txkmb.requestFocus();
+        txkode.requestFocus();
         txkode.setEnabled(true);
         optbaru.setSelected(true);
         optedit.setSelected(false);
@@ -466,7 +466,7 @@ public class Halaman_Utama extends javax.swing.JFrame {
             return;
         }
         try{
-            String sql="delete from tb_sewa where nip='" + txkode.getText() + "'";
+            String sql="delete from tb_sewa where kode_pinjam='" + txkode.getText() + "'";
             statement.executeUpdate(sql);
             JOptionPane.showMessageDialog(this, "Hapus data berhasil", "Informasi", JOptionPane.INFORMATION_MESSAGE);
         }
